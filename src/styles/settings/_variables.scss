@@ -1,0 +1,11 @@
+/**
+ * General variables
+ */
+
+// Transition
+$standard-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$accelerate-ease: cubic-bezier(0.4, 0, 1, 1);
+$decelerate-ease: cubic-bezier(0, 0, 0.2, 1);
+
+// Header
+$header-height: rem(62px);

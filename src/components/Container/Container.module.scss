@@ -1,0 +1,21 @@
+@import '@/styles/theme.scss';
+
+.container {
+  transition: padding 250ms cubic-bezier(0.0, 0, 0.2, 1);
+}
+
+.grid1440 {
+  composes: container;
+  @include grid1440();
+}
+
+.grid1366 {
+  composes: container;
+  @include grid1366();
+}
+
+.grid1024 {
+  composes: container;
+  @include grid1024();
+}
+

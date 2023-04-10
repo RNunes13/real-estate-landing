@@ -1,0 +1,11 @@
+@import "@/styles/theme.scss";
+
+.actions {
+  display: flex;
+  align-items: center;
+  column-gap: $space-nano;
+
+  @include mq($screen-lg, max) {
+    display: none;
+  }
+}

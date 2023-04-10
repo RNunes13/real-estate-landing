@@ -1,0 +1,23 @@
+@import "@/styles/theme.scss";
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  column-gap: rem($space-nano);
+  z-index: z('logo');
+}
+
+.headerLogoImage {
+  max-width: rem(30px);
+  max-height: rem(30px);
+}
+
+.headerLogoCaption {
+  @include titleMedium;
+  color: $color-primary;
+  margin-top: 10px;
+
+  @include mq($screen-lg, max) {
+    display: none;
+  }
+}
