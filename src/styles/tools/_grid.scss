@@ -1,0 +1,42 @@
+@mixin gridBase {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-right: $space-sm;
+  padding-left: $space-sm;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq($screen-md, max) {
+    padding-right: $space-xs;
+    padding-left: $space-xs;
+  }
+
+  @include mq($screen-sm, max) {
+    padding-right: $space-xxxs;
+    padding-left: $space-xxxs;
+  }
+}
+
+@mixin grid1024 {
+  @include gridBase();
+  max-width: 1024px;
+}
+
+@mixin grid1366 {
+  @include gridBase();
+  max-width: 1366px;
+}
+
+@mixin grid1440 {
+  @include gridBase();
+  max-width: 1440px;
+}
+
+@mixin grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: $space-xxxs;
+  grid-row-gap: $space-xxxs;
+  justify-items: stretch;
+}

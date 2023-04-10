@@ -1,0 +1,18 @@
+@import "@/styles/theme.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: $space-xxxs 0;
+  background-color: $color-neutral-0;
+  box-shadow: 0 -10px 20px $color-neutral-40;
+  min-height: $header-height;
+  z-index: z('header');
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: $space-xxxs;
+}

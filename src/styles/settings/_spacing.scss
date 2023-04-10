@@ -1,0 +1,23 @@
+@use "~sass-rem" as *;
+
+/**
+ * Spaces
+ */
+$space-quarck: rem(4px);
+$space-nano: rem(8px);
+$space-xxxxs: rem(12px);
+$space-xxxs: rem(16px);
+$space-xxs: rem(20px);
+$space-xs: rem(24px);
+$space-sm: rem(32px);
+$space-md: rem(40px);
+$space-lg: rem(48px);
+$space-xl: rem(56px);
+$space-xxl: rem(64px);
+
+/**
+ * Border
+ */
+$border-radius-sm: rem(8px);
+$border-radius-md: rem(12px);
+$border-radius-lg: rem(16px);

@@ -1,0 +1,94 @@
+@import "@/styles/theme.scss";
+
+.items {
+  display: flex;
+  align-items: center;
+  column-gap: $space-xxs;
+  background-color: $color-neutral-0;
+  z-index: z('nav');
+  transition: all 200ms $decelerate-ease;
+
+  @include mq($screen-xl, max) {
+    column-gap: $space-xxxs;
+  }
+
+  @include mq($screen-md, max) {
+    position: fixed;
+    inset: $header-height 0 auto 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $space-xs $space-xs $space-md;
+    row-gap: $space-xxs;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  @include mq($screen-sm, max) {
+    padding: $space-xxxs $space-xxxs $space-sm;
+  }
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item {
+  @include reset-button;
+  @include bodyBoldMd;
+  position: relative;
+  color: $color-neutral-40;
+  transition: color 250ms $accelerate-ease;
+
+  &:hover {
+    color: $color-neutral-90;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    transform: translateX(-50%);
+    left: 50%;
+    display: inline-flex;
+    width: 0;
+    height: 2px;
+    background-color: $color-primary-30;
+    border-radius: $border-radius-sm;
+    transition: width 250ms $decelerate-ease;
+  }
+}
+
+.active {
+  composes: item;
+  color: $color-neutral-90;
+
+  &::after {
+    width: 80%;
+
+    @include mq($screen-lg, max) {
+      width: 100%;
+    }
+  }
+}
+
+.signItems {
+  @include mq($screen-lg) {
+    display: none
+  }
+}
+
+.menu {
+  @include reset-button;
+  z-index: z('menu');
+
+  @include mq($screen-md) {
+    display: none;
+  }
+}
+
+.menuIcon {
+  width: $space-xs;
+  height: $space-xs;
+  fill: $color-primary;
+}

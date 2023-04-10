@@ -1,10 +1,9 @@
-import styles from "./page.module.scss";
-import "./global.scss";
+import { Container } from "@/components/Container/Container";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <Container>
       <p>Home Finder</p>
-    </main>
+    </Container>
   );
 }

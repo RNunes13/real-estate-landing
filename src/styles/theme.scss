@@ -1,13 +1,17 @@
-@use "~sass-rem" as rem;
+@import "~sass-rem";
 
 /**
  * Settings
  */
 @import './settings/colors';
 @import './settings/screen-sizes';
+@import './settings/spacing';
 @import './settings/typography';
+@import './settings/variables';
 
 /**
  * Tools
  */
-@import './tools/_mixins.scss';
+ @import './tools/functions';
+@import './tools/grid';
+@import './tools/mixins';
