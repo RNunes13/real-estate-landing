@@ -1,0 +1,100 @@
+@use "~sass-rem" as *;
+
+/**
+ * Font sizes
+ */
+$font-size-1: rem(12px);
+$font-size-2: rem(14px);
+$font-size-3: rem(16px);
+$font-size-4: rem(20px);
+$font-size-5: rem(24px);
+$font-size-6: rem(32px);
+$font-size-7: rem(48px);
+$font-size-8: rem(64px);
+$font-size-base: $font-size-3;
+
+$font-main: "Verdana", sans-serif;
+$font-support: "Montserrat", sans-serif;
+
+/**
+ * Font Weight
+ */
+ $weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
+
+$font-weight-base: map-get($weights, regular);
+
+/**
+ * Typographies
+ */
+@mixin titleLarge {
+  font-family: $font-support;
+  font-weight: 700;
+  font-size: $font-size-6;
+  line-height: rem(40px);
+}
+
+@mixin titleMedium {
+  font-family: $font-support;
+  font-weight: 700;
+  font-size: $font-size-5;
+  line-height: rem(32px);
+}
+
+@mixin subtitleMedium {
+  font-family: $font-support;
+  font-weight: 600;
+  font-size: $font-size-5;
+  line-height: rem(32px);
+}
+
+@mixin subtitleSmall {
+  font-family: $font-support;
+  font-weight: 600;
+  font-size: $font-size-4;
+  line-height: rem(24px);
+}
+
+@mixin bodyMediumMd {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: $font-size-3;
+  line-height: rem(24px);
+}
+
+@mixin bodyBoldMd {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: $font-size-3;
+  line-height: rem(24px);
+}
+
+@mixin bodyMediumSm {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: $font-size-2;
+  line-height: rem(20px);
+}
+
+@mixin bodyBoldSm {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: $font-size-2;
+  line-height: rem(20px);
+}
+
+@mixin caption {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: $font-size-1;
+  line-height: rem(16px);
+}

@@ -1,0 +1,88 @@
+/**
+ * Media Queries
+ * Mobile First
+ */
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+  }
+
+  @if $type == max {
+    $width: $width - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+@mixin between-breakpoints($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin reset-link {
+  text-decoration: inherit;
+  color: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin reset-media {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin reset-list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+@mixin reset-button {
+  cursor: pointer;
+  font: inherit;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: normal;
+  -moz-user-select: text;
+  outline: none;
+}
+
+/**
+ * Custom default browser scrollbar
+ */
+@mixin scrollbar(
+  $size: 6px,
+  $color: $color-neutral-50,
+  $background: $color-neutral-10
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color;
+    border-radius: 30px;
+  }
+
+  // For IE
+  body & {
+    scrollbar-face-color: $color;
+    scrollbar-track-color: $background;
+  }
+}
